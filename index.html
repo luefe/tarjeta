@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
             background-color: #e68fe0;
             padding: 20px;
         }
+
         .card {
             background: rgb(206, 222, 248);
             padding: 20px;
@@ -18,6 +20,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             display: inline-block;
         }
+
         button {
             margin: 10px;
             padding: 10px 20px;
@@ -26,14 +29,17 @@
             cursor: pointer;
             font-size: 16px;
         }
+
         .si {
             background-color: #78cf7b;
             color: white;
         }
+
         .no {
             background-color: #f6584c;
             color: white;
         }
+
         .modal {
             display: none;
             position: fixed;
@@ -45,6 +51,7 @@
             justify-content: center;
             align-items: center;
         }
+
         .modal-content {
             background: white;
             padding: 20px;
@@ -53,9 +60,25 @@
             width: 80%;
             max-width: 400px;
         }
+
         .modal img {
             width: 100%;
             max-width: 250px;
+        }
+
+        .gifs {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gifs div {
+            padding: 5px;
+        }
+
+        .columnas img {
+            display: block;
+            padding: 3px;
         }
 
         @media (max-width: 600px) {
@@ -63,28 +86,53 @@
                 max-width: 100%;
                 padding: 15px;
             }
+
             .modal-content {
                 width: 90%;
                 padding: 15px;
             }
+
             button {
                 width: 100%;
                 font-size: 14px;
                 padding: 8px;
-            }}
-
+            }
+        }
     </style>
 </head>
+
 <body>
-    
+
     <div class="card">
-        <h1>festejo mi cumple!!11!!1! <br>Tomaremos mates jugaremos <br>al bingo y cenaremos, <br>llevar gaseosa si quieren </h1>
-        <p>Este domingo</p>
-        <p>18:30 hs</p>
-        <p>Lugar: Mi casa</p>
-        <p>¿Vas a venir?</p>
-        <button class="si" onclick="mostrarModal(true)">Sip :D</button>
-        <button class="no" onclick="mostrarModal(false)">Nop :(</button>
+<h1>festejo mi cumple!!11!!1! <br>Tomaremos mates jugaremos <br>al bingo y cenaremos, <br>llevar gaseosa
+                    si quieren </h1>
+        <div class="gifs">
+            
+            <div class="columnas">
+                <img src="./img/GIF1.gif" alt="" height="60px" width="60px">
+                <img src="./img/GIF2.gif" alt="" height="60px" width="60px">
+                <img src="./img/GIF3.gif" alt="" height="60px" width="60px">
+            </div>
+            <div>
+                
+                <p>Este domingo</p>
+                <p>18:30 hs</p>
+                <p>Lugar: Mi casa</p>
+                <p>¿Vas a venir?</p>
+            </div>
+            <div>
+                <div class="columnas">
+                    <img src="./img/GIF4.gif" alt="" height="60px" width="60px">
+                    <img src="./img/GIF5.gif" alt="" height="60px" width="60px">
+                    <img src="./img/GIF6.gif" alt="" height="60px" width="60px">
+                </div>
+            </div>
+        </div>
+        <div>
+            <button class="si" onclick="mostrarModal(true)">Sip :D</button>
+            <button class="no" onclick="mostrarModal(false)">Nop :(</button>
+        </div>
+
     </div>
 
     <div id="modal" class="modal">
@@ -101,7 +149,7 @@
             var modal = document.getElementById("modal");
             var mensaje = document.getElementById("mensaje");
             var imagen = document.getElementById("imagen");
-            
+
             if (asiste) {
                 mensaje.innerText = "Joya!!! \n (ALERTA: esta info no me llega, \n no programé muy completo, \n avisame si venis por wsp 😗)";
                 imagen.src = "img/gif-perro.gif"; // Imagen de celebración
@@ -109,7 +157,7 @@
                 mensaje.innerText = "vos te lo perdés.";
                 imagen.src = "img/micara.jpg"; // Imagen triste
             }
-            
+
             modal.style.display = "flex";
         }
 
@@ -119,4 +167,5 @@
     </script>
 
 </body>
+
 </html>
